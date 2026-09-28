@@ -1,5 +1,13 @@
 cloud: cloud40
 lab: scalelab #scalelab/performancelab
+
+# QUADS API token for authenticated inventory download (required)
+quads_api_token: ""
+
+# QUADS server hostnames per lab (replace with actual hostnames)
+quads_hosts:
+  scalelab: quads.example.com
+  performancelab: quads.example.com
 dt_path: /root/test/architecture
 compute_count: 1
 
@@ -20,6 +28,7 @@ ocp_environment:
 
 # Optional: Local path to OCP inventory file
 # If specified and file exists, it will be used instead of downloading from lab
+# When using a local file, quads_api_token is not required
 # ocp_inventory_local_path: /path/to/local/ocpinventory.json
 
 # Enable telemetry (default: true)
